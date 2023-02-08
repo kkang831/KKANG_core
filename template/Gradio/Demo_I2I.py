@@ -1,6 +1,4 @@
-import os
 import gradio as gr
-from glob import glob
 
 def main():
 
