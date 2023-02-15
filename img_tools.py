@@ -35,10 +35,7 @@ def pilimg2tensor(images):
 	# output: tensor, -1~1, RGB, BCHW
 	max_val = 1.0
 	min_val = -1.0
-
-	print('!!!!!!!!!!!!!!!!!')
-	print('not yet')
-	raise
+	raise 'Not implemented yet'
 
 #############
 # Postprocess
@@ -53,5 +50,7 @@ def tensor2numpyimg(input_tensor):
 	output_image = output_image.transpose(0, 2, 3, 1)
 	if output_image.shape[-1] == 1:
 		return output_image[:,:,:,0]
-	elif output_image.shape[-1] == 1:
+	elif output_image.shape[-1] == 3:
 		return output_image
+	else:
+		raise Exception
